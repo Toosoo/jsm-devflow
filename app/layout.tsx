@@ -13,7 +13,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+    appearance={{
+      elements: {
+        formButtonPrimary:'primary-gradient',
+        footerActionLink:'primary-text-gradient hover:text-primary-500'
+
+      }
+    }}
+    >
       <html lang="en" dir="ltr">
         <body className={inter.className}>
           <SignedOut>
