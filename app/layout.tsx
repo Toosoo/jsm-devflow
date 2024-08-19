@@ -8,19 +8,18 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Devflow",
   description:
-  "community-driven platform for asking and answering programming questions Get help, share knowledge, and collaborate with developers from around the world. Explore topics in web development, mobile app development, algorithms, data structures, and more",
+    "community-driven platform for asking and answering programming questions Get help, share knowledge, and collaborate with developers from around the world. Explore topics in web development, mobile app development, algorithms, data structures, and more",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <ClerkProvider
-    appearance={{
-      elements: {
-        formButtonPrimary:'primary-gradient',
-        footerActionLink:'primary-text-gradient hover:text-primary-500'
-
-      }
-    }}
+      appearance={{
+        elements: {
+          formButtonPrimary: "primary-gradient",
+          footerActionLink: "primary-text-gradient hover:text-primary-500",
+        },
+      }}
     >
       <html lang="en" dir="ltr">
         <body className={inter.className}>
