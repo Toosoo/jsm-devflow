@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import React from "react";
+import ThemeProvider from "@/context/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -27,10 +28,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <SignInButton />
           </SignedOut>
           <SignedIn>
-            <UserButton />
           </SignedIn>
-
-          <main>{children}</main>
+          <ThemeProvider>
+            <main>{children}</main>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
