@@ -28,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <SignInButton />
           </SignedOut>
           <SignedIn>
+            <UserButton />
           </SignedIn>
           <ThemeProvider>
             <main>{children}</main>
