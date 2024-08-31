@@ -1,9 +1,14 @@
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <h1 className="bg-blue-500">home</h1>
 
-export default Home
+      <Link href="/ask-question">ask-question</Link>
+    </div>
+  );
+};
+
+export default Home;
