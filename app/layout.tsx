@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { ClerkProvider, SignInButton, SignedOut } from "@clerk/nextjs";
 import React from "react";
 import ThemeProvider from "@/context/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <ClerkProvider
+    afterSignOutUrl={"/"}
       appearance={{
         elements: {
           formButtonPrimary: "primary-gradient",
@@ -27,9 +28,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SignedOut>
             <SignInButton />
           </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
           <ThemeProvider>
             <main>{children}</main>
           </ThemeProvider>
