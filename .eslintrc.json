@@ -1,6 +1,26 @@
 {
-  "extends": ["next/core-web-vitals", "standard", "plugin:tailwindcss/recommended", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "standard",
+    "plugin:tailwindcss/recommended",
+    "prettier"
+  ],
   "rules": {
-    "tailwindcss/no-custom-classname": "off"
-  }
+    "tailwindcss/no-custom-classname": "off",
+    "react/no-unescaped-entities": "off",
+    "react/display-name": "off",
+    "react/prop-types": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/components/ui/**/*.js", "**/components/ui/**/*.jsx", "**/components/ui/**/*.ts", "**/components/ui/**/*.tsx"],
+      "rules": {
+        "react/no-unknown-property": "off",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "tailwindcss/classnames-order": "off",
+        "tailwindcss/enforces-shorthand": "off"
+      }
+    }
+  ]
 }
