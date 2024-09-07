@@ -22,12 +22,11 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
       document.documentElement.classList.remove("dark");
     }
   };
-
+  
   useEffect(() => {
     handleThemeChange();
   }, [mode]);
-  
-  console.log(mode)
+
   return <ThemeContext.Provider value={{ mode, setMode }}>{children}</ThemeContext.Provider>;
 };
 
