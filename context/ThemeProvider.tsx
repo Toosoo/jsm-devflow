@@ -22,7 +22,7 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
       document.documentElement.classList.remove("dark");
     }
   };
-  
+
   useEffect(() => {
     handleThemeChange();
   }, [mode]);
