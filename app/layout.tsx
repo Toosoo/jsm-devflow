@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider, SignInButton, SignedOut } from "@clerk/nextjs";
 import React from "react";
 import ThemeProvider from "@/context/ThemeProvider";
+import AnimationProvider from "@/context/AnimationProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <SignInButton />
           </SignedOut>
           <ThemeProvider>
-            <main>{children}</main>
+            <AnimationProvider>{children}</AnimationProvider>
           </ThemeProvider>
         </body>
       </html>
