@@ -26,9 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <html lang="en" dir="ltr">
         <body className={inter.className}>
-          {/* <SignedOut>
+          <SignedOut>
             <SignInButton />
-          </SignedOut> */}
+          </SignedOut>
           <ThemeProvider>
             <AnimationProvider>{children}</AnimationProvider>
           </ThemeProvider>
